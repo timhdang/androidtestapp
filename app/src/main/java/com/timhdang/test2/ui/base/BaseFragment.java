@@ -1,4 +1,4 @@
-package com.timhdang.test2.ui.slideshow;
+package com.timhdang.test2.ui.base;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,17 +13,17 @@ import android.arch.lifecycle.ViewModelProviders;
 
 import com.timhdang.test2.R;
 
-public class SlideshowFragment extends Fragment {
+public class BaseFragment extends Fragment {
 
-    private SlideshowViewModel slideshowViewModel;
+    private BaseViewModel baseViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        slideshowViewModel =
-                ViewModelProviders.of(this).get(SlideshowViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_slideshow, container, false);
+        baseViewModel =
+                ViewModelProviders.of(this).get(BaseViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_base, container, false);
         final TextView textView = root.findViewById(R.id.text_slideshow);
-        slideshowViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        baseViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
