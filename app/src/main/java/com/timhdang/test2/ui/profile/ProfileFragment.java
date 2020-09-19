@@ -29,12 +29,16 @@ public class ProfileFragment extends Fragment {
     private ProfileViewModel profileViewModel;
     private Button submit;
     private EditText fnEditText, lnEditText, eEditText,pEditText;
+    private String SAVED_FIRST_NAME;
+    private String SAVED_LAST_NAME;
+    private String SAVED_EMAIL;
+    private String SAVED_PHONE;
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         profileViewModel =
                 ViewModelProviders.of(this).get(ProfileViewModel.class);
         View root = inflater.inflate(R.layout.fragment_profile, container, false);
-        //final TextView textView = root.findViewById(R.id.text_gallery);
 
         submit = root.findViewById(R.id.submit);
         fnEditText = root.findViewById(R.id.first_name);
@@ -58,21 +62,20 @@ public class ProfileFragment extends Fragment {
                 Gson gson = new Gson();
                 String json = gson.toJson(myObject);
                 prefsEditor.putString("personOfInterest", json);
-                //prefsEditor.apply();
                 prefsEditor.commit();
-                Log.e("json=",json);
                 Toast.makeText(getContext(),"Submitted!",Toast.LENGTH_SHORT).show();
             }
         });
 
-        /*
-        profileViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
-         */
         return root;
+    }
+
+    public void onSaveInstanceState( Bundle savedInstanceState ) {
+        // now, save the text if something overlaps this Activity
+        savedInstanceState.putString( SAVED_FIRST_NAME, fnEditText.getText().toString() );
+        savedInstanceState.putString( SAVED_LAST_NAME, lnEditText.getText().toString() );
+        savedInstanceState.putString( SAVED_EMAIL, fnEditText.getText().toString() );
+        savedInstanceState.putString( SAVED_PHONE, pEditText.getText().toString() );
+
     }
 }
