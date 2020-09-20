@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import com.timhdang.test2.R;
 
-public class notification extends Fragment {
+public class NotificationFragment extends Fragment {
 
 
     @Override
