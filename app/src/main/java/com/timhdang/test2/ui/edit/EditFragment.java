@@ -31,15 +31,6 @@ public class EditFragment extends Fragment {
         editViewModel =
                 ViewModelProviders.of(this).get(EditViewModel.class);
         View root = inflater.inflate(R.layout.fragment_edit, container, false);
-        /*final TextView textView = root.findViewById(R.id.text_home);
-        editViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
-
-         */
         profile_info = root.findViewById(R.id.profile_info);
         SharedPreferences mPrefs = getContext().getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
         Gson gson = new Gson();
@@ -47,13 +38,12 @@ public class EditFragment extends Fragment {
         Log.e("JSON=",json);
         Person p = gson.fromJson(json, Person.class);
 
-        profile_info.setText("First Name:" + p.getFirstname() +"\n"
-                              + "Last Name:" +  p.getLastname() + "\n"
-                              + "Email:" +      p.getEmail() +"\n"
+        profile_info.setText("Profile Info" + "\n\n"
+                              +  p.getFirstname() + p.getLastname() + "\n"
+                              +  "Email:" +      p.getEmail() +"\n"
                               +  "Phone:" +        p.getPhone() +"\n"      );
 
 
-        //profile_info.setText("HAHHAA");
         return root;
     }
 }

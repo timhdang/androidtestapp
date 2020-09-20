@@ -40,7 +40,7 @@ public class ProfileFragment extends Fragment {
                 ViewModelProviders.of(this).get(ProfileViewModel.class);
         View root = inflater.inflate(R.layout.fragment_profile, container, false);
 
-        submit = root.findViewById(R.id.submit);
+        submit = root.findViewById(R.id.save);
         fnEditText = root.findViewById(R.id.first_name);
         lnEditText = root.findViewById(R.id.last_name);
         eEditText = root.findViewById(R.id.email);

@@ -50,11 +50,11 @@
         android:hint="Phone"
         android:gravity="center"></EditText>
     <Button
-        android:id="@+id/submit"
+        android:id="@+id/save"
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:background="#A020F0"
-        android:text="Submit"
+        android:text="Save"
         android:textColor="#Fff"
         android:layout_marginTop="30dp"
         android:layout_marginLeft="200dp"

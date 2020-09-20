@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/nav_profile"
         android:name="com.timhdang.test2.ui.profile.ProfileFragment"
-        android:label="@string/menu_home"
+        android:label="Android Test App"
         tools:layout="@layout/fragment_profile">
     </fragment>
 
@@ -16,12 +16,12 @@
     <fragment
         android:id="@+id/nav_edit"
         android:name="com.timhdang.test2.ui.edit.EditFragment"
-        android:label="@string/menu_gallery"
+        android:label="Android Test App"
         tools:layout="@layout/fragment_edit" />
 
     <fragment
         android:id="@+id/nav_not_show"
         android:name="com.timhdang.test2.ui.base.BaseFragment"
-        android:label="@string/menu_slideshow"
+        android:label="Android Test App"
         tools:layout="@layout/fragment_base" />
 </navigation>
