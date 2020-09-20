@@ -13,24 +13,13 @@ public class FakeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_fake);
 
         new Handler().postDelayed(new Runnable() {
-
-// Using handler with postDelayed called runnable run method
-
             @Override
-
             public void run() {
-
                 Intent i = new Intent(FakeActivity.this, MainActivity.class);
-
                 startActivity(i);
-
-                // close this activity
-
                 finish();
-
             }
-
-        }, 3000); // wait for 5 seconds
+        }, 2200); // wait for 2.2 seconds
     }
 }
 
