@@ -8,7 +8,7 @@
     tools:context=".ui.profile.ProfileFragment">
 
 
-        <EditText
+    <EditText
             android:id="@+id/first_name"
             android:layout_width="200dp"
             android:background="@drawable/border"
@@ -16,7 +16,7 @@
             android:layout_marginLeft="100dp"
             android:layout_marginStart="100dp"
             android:layout_height="50dp"
-            android:hint="First Name"
+            android:hint="@string/first_name"
             android:gravity="center"></EditText>
 
     <EditText
@@ -27,7 +27,7 @@
         android:layout_marginLeft="100dp"
         android:layout_marginStart="100dp"
         android:layout_height="50dp"
-        android:hint="Last Name"
+        android:hint="@string/last_name"
         android:gravity="center"></EditText>
     <EditText
         android:id="@+id/email"
@@ -37,7 +37,7 @@
         android:layout_marginLeft="100dp"
         android:layout_marginStart="100dp"
         android:layout_height="50dp"
-        android:hint="Email"
+        android:hint="@string/email"
         android:gravity="center"></EditText>
     <EditText
         android:id="@+id/phone"
@@ -47,14 +47,14 @@
         android:layout_marginLeft="100dp"
         android:layout_marginStart="100dp"
         android:layout_height="50dp"
-        android:hint="Phone"
+        android:hint="@string/phone"
         android:gravity="center"></EditText>
     <Button
         android:id="@+id/save"
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:background="#A020F0"
-        android:text="Save"
+        android:text="@string/save"
         android:textColor="#Fff"
         android:layout_marginTop="30dp"
         android:layout_marginLeft="200dp"

@@ -11,7 +11,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:gravity="center|center_horizontal|center_vertical"
-        android:text="some text"></TextView>
+        android:text="@string/notification_enable"></TextView>
     <Button
         android:id="@+id/ok_button"
         android:layout_width="60dp"

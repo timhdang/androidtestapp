@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">test2</string>
+    <string name="app_name">Android Test App</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -7,14 +7,28 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
 
     <string name="home_second">Home Second</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="welcome_to_test_app">Welcome to the test app</string>
+
+
+
+    <!-- Profile Fragment -->
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="phone">Phone</string>
+    <string name="email">Email</string>
+    <string name="save">Save</string>
+    <string name="submitted">Submited!</string>
+    <string name="person_of_interest">personOfInterest</string>
+    <!--Edit Fragment -->
+    <string name="profile_info">Profile Info</string>
+    <!--Notification Fragment-->
     <string name="notification_enable">Notifications enabled!</string>
+
+    <!--Fake Activity-->
+    <string name="hi_mr_vang">Hi, Mr. Vang</string>
 </resources>

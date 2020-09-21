@@ -26,7 +26,6 @@ import static android.content.Context.MODE_PRIVATE;
 public class ProfileFragment extends Fragment {
 
     public static String PREF_NAME = "personOfInterest";
-    private ProfileViewModel profileViewModel;
     private Button submit;
     private EditText fnEditText, lnEditText, eEditText,pEditText;
     private String SAVED_FIRST_NAME;
@@ -36,8 +35,6 @@ public class ProfileFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        profileViewModel =
-                ViewModelProviders.of(this).get(ProfileViewModel.class);
         View root = inflater.inflate(R.layout.fragment_profile, container, false);
 
         submit = root.findViewById(R.id.save);
@@ -54,16 +51,13 @@ public class ProfileFragment extends Fragment {
                 String ln = lnEditText.getText().toString();
                 String e = eEditText.getText().toString();
                 String p = pEditText.getText().toString();
-
                 Person myObject = new Person(fn,ln,e,p);
-
-
                 SharedPreferences.Editor prefsEditor = mPrefs.edit();
                 Gson gson = new Gson();
                 String json = gson.toJson(myObject);
-                prefsEditor.putString("personOfInterest", json);
+                prefsEditor.putString(getString(R.string.person_of_interest), json);
                 prefsEditor.commit();
-                Toast.makeText(getContext(),"Submitted!",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(),R.string.submitted,Toast.LENGTH_SHORT).show();
             }
         });
 

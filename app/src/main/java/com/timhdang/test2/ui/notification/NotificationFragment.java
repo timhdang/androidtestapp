@@ -21,11 +21,7 @@ public class NotificationFragment extends Fragment {
         final Dialog dialog = new Dialog(getContext());
         //setting custom layout to dialog
         dialog.setContentView(R.layout.custom_dialog_layout);
-        dialog.setTitle("Custom Dialog");
-
-        //adding text dynamically
-        TextView txt = (TextView) dialog.findViewById(R.id.notification_content);
-        txt.setText("Put your dialog text here.");
+        dialog.setTitle("Alert!");
 
 
         //adding button click event
