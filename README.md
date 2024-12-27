@@ -1,3 +1,3 @@
 # androidtestapp
 
-Appscal Jr Software Developer Coding Test.
+Jr Software Developer Coding Test.
